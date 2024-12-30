@@ -1,0 +1,29 @@
+# ----------------------------------------------------------------------
+# -- Character encodings
+# ----------------------------------------------------------------------
+
+# Serve all resources labeled as `text/html` or `text/plain`
+# with the media type `charset` parameter set to `UTF-8`.
+
+AddDefaultCharset utf-8
+
+
+# ------------------------------------------------------------------------------
+# Prevent Apache from adding a trailing footer line containing
+# information about the server to the server-generated documents
+# (e.g.: error messages, directory listings, etc.)
+#
+# https://httpd.apache.org/docs/current/mod/core.html#serversignature
+
+ServerSignature Off
+
+
+# ------------------------------------------------------------------------------
+# -- Disable Indexes
+# ------------------------------------------------------------------------------
+
+Options -Indexes
+
+
+
+DirectoryIndex index.php
