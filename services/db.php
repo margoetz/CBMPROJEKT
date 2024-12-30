@@ -21,14 +21,34 @@ function connect(): mysqli
 }
 
 
-function query($query): mysqli_result
+/**
+ * Executes the given SQL query on the MySQL database connection and returns the result.
+ *
+ * This function uses the active MySQL connection to run the provided query
+ * and retrieves the resulting data or metadata.
+ *
+ * @param string $query The SQL query string to be executed.
+ *
+ * @return mysqli_result The result set returned by the executed query.
+ */
+function query(string $query): mysqli_result
 {
     $mysqli = connect();
 
     return $mysqli->query($query);
 }
 
-function disconnect($mysqli): void
+/**
+ * Closes an active MySQLi database connection.
+ *
+ * This function terminates the provided MySQLi connection and releases
+ * any associated resources.
+ *
+ * @param mysqli $mysqli The active MySQLi database connection instance to be closed.
+ *
+ * @return void No value is returned by this function.
+ */
+function disconnect(mysqli $mysqli): void
 {
     $mysqli->close();
 }
