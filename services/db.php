@@ -52,5 +52,6 @@ function disconnect(mysqli $mysqli): void
 {
     $mysqli->close();
 }
- // der jbngeberewrerhhz
+
+
 
